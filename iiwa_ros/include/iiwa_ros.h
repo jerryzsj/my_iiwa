@@ -89,6 +89,7 @@ namespace iiwa_ros {
     void init(const std::string& topic) {
       ros::NodeHandle nh;
       subscriber = nh.subscribe<ROSMSG>(topic, 1, &iiwaStateHolder<ROSMSG>::set, this);
+      //last_update_time = ros::Time::now();
     }
     
     bool has_new_value() {
@@ -149,6 +150,7 @@ namespace iiwa_ros {
      * @return void
      */
     void init();
+    void init_iiwa();
     
     /**
      * @brief Returns true is a new Cartesian pose of the robot is available.

@@ -1,0 +1,20 @@
+<package>
+  <name>iiwa_test</name>
+  <version>0.0.0</version>
+  <description>To test iiwa_ros package</description>
+  <author email="sxz595@bham.ac.uk">Senjing Zheng</author>
+  <maintainer email="sxz595@bham.ac.uk">Senjing Zheng</maintainer>
+
+  <license>BSD</license>
+
+  <run_depend>test_publisher</run_depend>
+  <run_depend>moveit_core</run_depend>
+  <run_depend>moveit_ros_planning_interface</run_depend>
+  <run_depend>moveit_ros_planning</run_depend>
+  
+  <build_depend>iiwa_ros</build_depend>
+  <run_depend>iiwa_ros</run_depend>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+</package>

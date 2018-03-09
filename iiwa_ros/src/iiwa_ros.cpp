@@ -52,6 +52,27 @@ namespace iiwa_ros {
     path_parameters_service_.setServiceName("configuration/pathParameters");
     time_to_destination_service_.setServiceName("state/timeToDestination");
   }
+  void iiwaRos::init_iiwa()
+  {	
+    holder_state_pose_.init("iiwa/state/CartesianPose");
+    holder_state_joint_position_.init("iiwa/state/JointPosition");
+    holder_state_joint_torque_.init("iiwa/state/JointTorque");
+    holder_state_wrench_.init("iiwa/state/CartesianWrench");
+    holder_state_joint_stiffness_.init("iiwa/state/JointStiffness");
+    holder_state_joint_position_velocity_.init("iiwa/state/JointPositionVelocity");
+    holder_state_joint_damping_.init("iiwa/state/JointDamping");
+    holder_state_joint_velocity_.init("iiwa/state/JointVelocity");
+    holder_state_destination_reached_.init("iiwa/state/DestinationReached");
+    
+    holder_command_pose_.init("iiwa/command/CartesianPose");
+    holder_command_joint_position_.init("iiwa/command/JointPosition");
+    holder_command_joint_position_velocity_.init("iiwa/command/JointPositionVelocity");
+    holder_command_joint_velocity_.init("iiwa/command/JointVelocity");
+    
+    smart_servo_service_.setServiceName("iiwa/configuration/configureSmartServo");
+    path_parameters_service_.setServiceName("iiwa/configuration/pathParameters");
+    time_to_destination_service_.setServiceName("iiwa/state/timeToDestination");
+  }
   
   bool iiwaRos::getRobotIsConnected() {
     ros::Duration diff = (ros::Time::now() - last_update_time);

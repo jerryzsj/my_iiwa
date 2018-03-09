@@ -25,6 +25,8 @@
 
 #include <iiwa_msgs/JointQuantity.h>
 #include <iiwa_msgs/CartesianQuantity.h>
+#include <geometry_msgs/WrenchStamped.h>
+#include <geometry_msgs/PoseStamped.h>
 
 namespace iiwa_ros {
   
@@ -85,6 +87,18 @@ namespace iiwa_ros {
     quantity.a = value;
     quantity.b = value;
     quantity.c = value;
+    return quantity;
+  }
+  
+  geometry_msgs::PoseStamped CartesianPoseFromDouble(const double x, const double y, const double z, const double a, const double b, const double c,const double d) {
+    geometry_msgs::PoseStamped quantity;
+    quantity.pose.position.x = x;
+    quantity.pose.position.y = y;
+    quantity.pose.position.z = z;
+    quantity.pose.orientation.w = a;
+    quantity.pose.orientation.x = b;
+    quantity.pose.orientation.y = c;
+    quantity.pose.orientation.z = d;
     return quantity;
   }
   
