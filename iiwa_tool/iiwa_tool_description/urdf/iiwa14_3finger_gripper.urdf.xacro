@@ -778,7 +778,7 @@
   <joint name="couling_joint" type="fixed">
     <parent link="coupling_link" />
     <child link = "palm" />
-    <origin xyz="0.1 0.1 -0.1" rpy="${PI/2} ${PI/2} ${PI/2}" />   
+    <origin xyz="0.06 0.1 0.06" rpy="${PI/2} ${PI/2} ${PI/2}" />   
   </joint>
 
     <!-- Insert the fingers -->
