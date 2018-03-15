@@ -22,15 +22,15 @@
   
   <link name="world">
     <visual>
-      <origin xyz="0 0 1.5" rpy="0 0 0"/>
+      <origin xyz="0 0 0.38" rpy="0 0 0"/>
       <geometry>
-	<box size="1 2 3"/>
+	<box size="0.60 0.60 0.76"/>
       </geometry>
     </visual>
     <collision>
-      <origin xyz="0 0 1.5" rpy="0 0 0"/>
+      <origin xyz="0 0 0.38" rpy="0 0 0"/>
       <geometry>
-	<box size="1 2 3"/>
+	<box size="0.60 0.60 0.76"/>
       </geometry>
     </collision>
   </link>
@@ -41,7 +41,7 @@
   
   <!-- Here we insert an iiwa14 robot in the scene, it's origin is just on top of the box previously defined. You can use 0,0,0 if you don't have that. -->
   <xacro:iiwa14 hardware_interface="$(arg hardware_interface)" robot_name="$(arg robot_name)" parent="world">
-    <origin xyz="0 0 3" rpy="0 0 0"/>
+    <origin xyz="0 0 0.76" rpy="0 0 0"/>
   </xacro:iiwa14>
   
   <!-- Tool properties -->
