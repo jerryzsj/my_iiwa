@@ -20,7 +20,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_0.STL" />
         </geometry>
-        <material name="Black">
+        <material name="Grey">
           <color rgba="0 1 0 1"/>
         </material>
       </visual>
@@ -52,7 +52,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_1.STL" />
         </geometry>
-        <material name="Black"/>
+        <material name="Grey"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
@@ -88,7 +88,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_2.STL" />
         </geometry>
-        <material name="Black"/>
+        <material name="Grey"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
@@ -122,7 +122,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_3.STL" />
         </geometry>
-        <material name="Black"/>
+        <material name="Grey"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -794,7 +794,7 @@
           <geometry>
             <mesh filename="package://iiwa_tool_description/meshes/visual/palm.STL" />
           </geometry>
-          <material name="Black">
+          <material name="Grey">
             <color rgba="0 1 0 1"/>
           </material>
         </visual>
