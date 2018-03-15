@@ -744,7 +744,7 @@
   <joint name="tool_joint" type="fixed">
     <parent link="$(arg robot_name)_link_ee" />
     <child link = "coupling_link" />
-    <origin xyz="0 0 0.05" rpy="${PI/2} 0 0" />  
+    <origin xyz="1 2 3" rpy="${PI/2} 0 0" />  
   </joint>
   
   <!-- Here we define the geometry of the coupling. the mass, center of gravity, inertial were unknown -->
