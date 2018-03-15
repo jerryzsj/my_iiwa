@@ -716,12 +716,17 @@
       <geometry>
 	<box size="0.60 0.60 0.76"/>
       </geometry>
+      <material name="Grey">
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0.38" rpy="0 0 0"/>
       <geometry>
+
 	<box size="0.60 0.60 0.76"/>
       </geometry>
+      <material name="Grey">
+      </material>
     </collision>
   </link>
   
