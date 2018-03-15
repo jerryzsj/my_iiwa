@@ -744,7 +744,7 @@
   <joint name="tool_joint" type="fixed">
     <parent link="$(arg robot_name)_link_ee" />
     <child link = "coupling_link" />
-    <origin xyz="0 0 0.05" rpy="${PI / 2} ${PI / 2} ${PI / 2}" />  
+    <origin xyz="0 0 0.0" rpy="${PI / 2} ${PI / 2} ${PI / 2}" />  
   </joint>
   
   <!-- Here we define the geometry of the coupling. the mass, center of gravity, inertial were unknown -->
@@ -778,7 +778,7 @@
   <joint name="couling_joint" type="fixed">
     <parent link="coupling_link" />
     <child link = "palm" />
-    <origin xyz="0 0 0.025" rpy="0 ${PI / 2} ${PI / 2}" />   
+    <origin xyz="0 0 0.0" rpy="0 ${PI / 2} ${PI / 2}" />   
   </joint>
 
     <!-- Insert the fingers -->
