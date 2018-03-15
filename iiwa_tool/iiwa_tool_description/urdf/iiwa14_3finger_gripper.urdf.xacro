@@ -20,8 +20,8 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_0.STL" />
         </geometry>
-        <material name="green">
-          <color rgba="0 0 0 0.5"/>
+        <material name="Black">
+          <color rgba="0 1 0 1"/>
         </material>
       </visual>
       <collision>
@@ -30,7 +30,7 @@
           <mesh filename="package://iiwa_tool_description/meshes/collision/link_0.STL" />
         </geometry>
         <material name="yellow">
-          <color rgba="0 0 0 0.5"/>
+          <color rgba="0 1 1 1"/>
         </material>
       </collision>
       <inertial>
@@ -52,7 +52,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_1.STL" />
         </geometry>
-        <material name="green"/>
+        <material name="Black"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
@@ -60,7 +60,7 @@
           <mesh filename="package://iiwa_tool_description/meshes/collision/link_1.STL"/>
         </geometry>
         <material name="yellow">
-          <color rgba="0 0 0 0.5"/>
+          <color rgba="0 1 1 1"/>
         </material>
       </collision>
       <inertial>
@@ -88,7 +88,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_2.STL" />
         </geometry>
-        <material name="green"/>
+        <material name="Black"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
@@ -122,7 +122,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/visual/link_3.STL" />
         </geometry>
-        <material name="green"/>
+        <material name="Black"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -755,7 +755,7 @@
           <mesh filename="package://iiwa_tool_description/meshes//visual/coupling.STL" />
         </geometry>
         <material name="Grey">
-          <!--color rgba="0 0 0 0.5"/-->
+          <!--color rgba="0 1 0 1"/-->
         </material>
       </visual>
       <collision>
@@ -764,7 +764,7 @@
           <mesh filename="package://iiwa_tool_description/meshes//collision/coupling.STL" />
         </geometry>
         <material name="Grey">
-          <!--color rgba="0 0 0 0.5"/-->
+          <!--color rgba="0 1 1 1"/-->
         </material>
       </collision>
       <inertial>
@@ -794,8 +794,8 @@
           <geometry>
             <mesh filename="package://iiwa_tool_description/meshes/visual/palm.STL" />
           </geometry>
-          <material name="green">
-            <color rgba="0 0 0 0.5"/>
+          <material name="Black">
+            <color rgba="0 1 0 1"/>
           </material>
         </visual>
         <!-- Mesh collision -->
@@ -804,7 +804,7 @@
             <mesh filename="package://iiwa_tool_description/meshes/collision/palm.STL"/>
           </geometry>
           <material name="yellow">
-            <color rgba="0 0 0 0.5"/>
+            <color rgba="0 1 1 1"/>
           </material>
         </collision> -->
         <!-- Simple shape collision -->
@@ -814,7 +814,7 @@
             <box size="0.1 0.1 0.1"/>
           </geometry>
           <material name="yellow">
-            <color rgba="0 0 0 0.5"/>
+            <color rgba="0 1 1 1"/>
           </material>
         </collision>
         <inertial>
