@@ -18,7 +18,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_0.STL" />
+          <mesh filename="package://iiwa_tool_description/meshes/visual/link_0.STL" />
         </geometry>
         <material name="green">
           <color rgba="0 1 0 1"/>
@@ -27,7 +27,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_0.STL" />
+          <mesh filename="package://iiwa_tool_description/meshes/collision/link_0.STL" />
         </geometry>
         <material name="yellow">
           <color rgba="0 1 1 1"/>
@@ -50,14 +50,14 @@
       <visual>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_1.STL" />
+          <mesh filename="package://iiwa_tool_description/meshes/visual/link_1.STL" />
         </geometry>
         <material name="green"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_1.STL"/>
+          <mesh filename="package://iiwa_tool_description/meshes/collision/link_1.STL"/>
         </geometry>
         <material name="yellow">
           <color rgba="0 1 1 1"/>
@@ -86,14 +86,14 @@
       <visual>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_2.STL" />
+          <mesh filename="package://iiwa_tool_description/meshes/visual/link_2.STL" />
         </geometry>
         <material name="green"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
           <geometry>
-            <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_2.STL"/>
+            <mesh filename="package://iiwa_tool_description/meshes/collision/link_2.STL"/>
           </geometry>
         <material name="yellow"/>
       </collision>
@@ -120,14 +120,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/link_3.STL" />
+          <mesh filename="package://iiwa_tool_description/meshes/visual/link_3.STL" />
         </geometry>
         <material name="green"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/link_3.STL"/>
+          <mesh filename="package://iiwa_tool_description/meshes/collision/link_3.STL"/>
         </geometry>
         <material name="yellow"/>
       </collision>
@@ -752,7 +752,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/visual/coupling.STL" />
+          <mesh filename="package://iiwa_tool_description/meshes//visual/coupling.STL" />
         </geometry>
         <material name="green">
           <color rgba="0 1 0 1"/>
@@ -761,7 +761,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/collision/coupling.STL" />
+          <mesh filename="package://iiwa_tool_description/meshes//collision/coupling.STL" />
         </geometry>
         <material name="yellow">
           <color rgba="0 1 1 1"/>
@@ -792,7 +792,7 @@
       <link name="palm">
         <visual>
           <geometry>
-            <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/visual/palm.STL" />
+            <mesh filename="package://iiwa_tool_description/meshes/visual/palm.STL" />
           </geometry>
           <material name="green">
             <color rgba="0 1 0 1"/>
@@ -801,7 +801,7 @@
         <!-- Mesh collision -->
         <!-- <collision>
           <geometry>
-            <mesh filename="package://robotiq_hand_description/meshes/s-model_articulated/collision/palm.STL"/>
+            <mesh filename="package://iiwa_tool_description/meshes/collision/palm.STL"/>
           </geometry>
           <material name="yellow">
             <color rgba="0 1 1 1"/>
