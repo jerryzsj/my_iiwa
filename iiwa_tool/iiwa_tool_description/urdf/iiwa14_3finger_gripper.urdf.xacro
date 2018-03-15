@@ -29,7 +29,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/collision/link_0.STL" />
         </geometry>
-        <material name="Orange">
+        <material name="Grey">
           <color rgba="0 1 1 1"/>
         </material>
       </collision>
@@ -59,7 +59,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/collision/link_1.STL"/>
         </geometry>
-        <material name="Orange">
+        <material name="Grey">
           <color rgba="0 1 1 1"/>
         </material>
       </collision>
@@ -95,7 +95,7 @@
           <geometry>
             <mesh filename="package://iiwa_tool_description/meshes/collision/link_2.STL"/>
           </geometry>
-        <material name="Orange"/>
+        <material name="Grey"/>
       </collision>
       <inertial>
         <origin rpy="0 0 ${3.1416/2}" xyz="0.00048 0.02167 0.00018"/>
@@ -129,7 +129,7 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes/collision/link_3.STL"/>
         </geometry>
-        <material name="Orange"/>
+        <material name="Grey"/>
       </collision>
       <inertial>
         <origin rpy="0 0 0" xyz="0.01626 0.00049 0.0002"/>
@@ -803,7 +803,7 @@
           <geometry>
             <mesh filename="package://iiwa_tool_description/meshes/collision/palm.STL"/>
           </geometry>
-          <material name="Orange">
+          <material name="Grey">
             <color rgba="0 1 1 1"/>
           </material>
         </collision> -->
@@ -813,7 +813,7 @@
           <geometry>
             <box size="0.1 0.1 0.1"/>
           </geometry>
-          <material name="Orange">
+          <material name="Grey">
             <color rgba="0 1 1 1"/>
           </material>
         </collision>
