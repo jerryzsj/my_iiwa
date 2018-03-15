@@ -754,8 +754,8 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes//visual/coupling.STL" />
         </geometry>
-        <material name="gray">
-          <color rgba="0 1 0 1"/>
+        <material name="Grey">
+          <!--color rgba="0 1 0 1"/-->
         </material>
       </visual>
       <collision>
@@ -763,8 +763,8 @@
         <geometry>
           <mesh filename="package://iiwa_tool_description/meshes//collision/coupling.STL" />
         </geometry>
-        <material name="gray">
-          <color rgba="0 1 1 1"/>
+        <material name="Grey">
+          <!--color rgba="0 1 1 1"/-->
         </material>
       </collision>
       <inertial>
@@ -778,7 +778,7 @@
   <joint name="couling_joint" type="fixed">
     <parent link="coupling_link" />
     <child link = "palm" />
-    <origin xyz="0.03 0.05 -0.05" rpy="${PI/2} ${PI/2} ${PI/2}" />   
+    <origin xyz="0.1 0.06 -0.05" rpy="${PI/2} ${PI/2} ${PI/2}" />   
   </joint>
 
     <!-- Insert the fingers -->
