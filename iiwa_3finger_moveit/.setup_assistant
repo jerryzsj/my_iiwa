@@ -5,4 +5,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/iiwa_3finger.srdf
   CONFIG:
-    generated_timestamp: 1457651071
+    author_name: Senjing Zheng
+    author_email: senjing.zheng@gmail.com
+    generated_timestamp: 1524771131
