@@ -1,0 +1,21 @@
+<package>
+  <name>iiwa_3finger_examples</name>
+  <version>0.0.0</version>
+  <description>The iiwa_tool_examples package</description>
+  <author email="senjing.zheng@gmail.com">Senjing Zheng</author>
+  <maintainer email="senjing.zheng@gmail.com">Senjing Zheng</maintainer>
+
+  <license>BSD</license>
+
+  <run_depend>iiwa_3finger_description</run_depend>
+  <run_depend>iiwa_3finger_moveit</run_depend>
+  <run_depend>moveit_core</run_depend>
+  <run_depend>moveit_ros_planning_interface</run_depend>
+  <run_depend>moveit_ros_planning</run_depend>
+  
+  <build_depend>iiwa_ros</build_depend>
+  <run_depend>iiwa_ros</run_depend>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+</package>
