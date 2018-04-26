@@ -5,10 +5,7 @@
   
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
-  <!--Import the iiwa14 macro -->
-  <xacro:include filename="$(find iiwa_description)/urdf/iiwa14.xacro"/>
   
-
   <!--Build finger model -->
   <xacro:macro name="robotiq_finger" params="prefix">
     <!-- Link list -->
@@ -27,7 +24,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/collision/link_0.STL" />
+          <mesh filename="package://iiwa_3finger_description/meshes/collision/link_0.STL" />
         </geometry>
         <material name="Grey">
           <!-- <color rgba="0 1 1 1"/> -->
@@ -50,14 +47,14 @@
       <visual>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/visual/link_1.STL" />
+          <mesh filename="package://iiwa_3finger_description/meshes/visual/link_1.STL" />
         </geometry>
         <material name="Grey"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.05717 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/collision/link_1.STL"/>
+          <mesh filename="package://iiwa_3finger_description/meshes/collision/link_1.STL"/>
         </geometry>
         <material name="Grey"> 
           <!-- <color rgba="0 1 1 1"/> -->
@@ -86,14 +83,14 @@
       <visual>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/visual/link_2.STL" />
+          <mesh filename="package://iiwa_3finger_description/meshes/visual/link_2.STL" />
         </geometry>
         <material name="Grey"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${3.1416/2}" xyz="0 0.03810 0.0075"/>
           <geometry>
-            <mesh filename="package://iiwa_tool_description/meshes/collision/link_2.STL"/>
+            <mesh filename="package://iiwa_3finger_description/meshes/collision/link_2.STL"/>
           </geometry>
         <material name="Grey"/>
       </collision>
@@ -120,14 +117,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/visual/link_3.STL" />
+          <mesh filename="package://iiwa_3finger_description/meshes/visual/link_3.STL" />
         </geometry>
         <material name="Grey"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes/collision/link_3.STL"/>
+          <mesh filename="package://iiwa_3finger_description/meshes/collision/link_3.STL"/>
         </geometry>
         <material name="Grey"/>
       </collision>

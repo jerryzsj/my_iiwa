@@ -5,31 +5,6 @@
 <!-- =================================================================================== -->
 <!-- Here we define the robot, we named it "iiwa14_3finger_gripper" -->
 <robot name="iiwa_3finger" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- Import Rviz colors -->
-  <material name="Black">
-    <color rgba="0.0 0.0 0.0 1.0"/>
-  </material>
-  <material name="Blue">
-    <color rgba="0.0 0.0 0.8 1.0"/>
-  </material>
-  <material name="Green">
-    <color rgba="0.0 0.8 0.0 1.0"/>
-  </material>
-  <material name="Grey">
-    <color rgba="0.4 0.4 0.4 1.0"/>
-  </material>
-  <material name="Orange">
-    <color rgba="1.0 0.423529411765 0.0392156862745 1.0"/>
-  </material>
-  <material name="Brown">
-    <color rgba="0.870588235294 0.811764705882 0.764705882353 1.0"/>
-  </material>
-  <material name="Red">
-    <color rgba="0.8 0.0 0.0 1.0"/>
-  </material>
-  <material name="White">
-    <color rgba="1.0 1.0 1.0 1.0"/>
-  </material>
   <!--Import the iiwa14 macro -->
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
   <!-- Import Transmissions -->
@@ -64,15 +39,6 @@
   <material name="White">
     <color rgba="1.0 1.0 1.0 1.0"/>
   </material>
-  <!--Import the iiwa14 macro -->
-  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
-  <!-- Import Transmissions -->
-  <!-- Include Utilities -->
-  <!-- The following macros are adapted from the LWR 4 definitions of the RCPRG - https://github.com/RCPRG-ros-pkg/lwr_robot -->
-  <!--Little helper macros to define the inertia matrix needed for links.-->
-  <!--Cuboid-->
-  <!--Cylinder: length is along the y-axis! -->
-  <!-- some constants -->
   <!--Build finger model -->
   <!--  Arguments for the iiwa14 macro  -->
   <!-- xacro:arg name="prefix" default=""/-->
@@ -515,7 +481,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_3finger_description/meshes/visual/collision/coupling.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/coupling.STL"/>
       </geometry>
       <material name="Grey">
         <!--color rgba="0 1 1 1"/-->
@@ -549,7 +515,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_0.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_0.STL"/>
       </geometry>
       <material name="Grey">
         <!-- <color rgba="0 1 1 1"/> -->
@@ -570,14 +536,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_1.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_1.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_1.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_1.STL"/>
       </geometry>
       <material name="Grey">
         <!-- <color rgba="0 1 1 1"/> -->
@@ -599,14 +565,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_2.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_2.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_2.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_2.STL"/>
       </geometry>
       <material name="Grey"/>
     </collision>
@@ -626,14 +592,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_3.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_3.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_3.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_3.STL"/>
       </geometry>
       <material name="Grey"/>
     </collision>
@@ -1119,7 +1085,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_0.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_0.STL"/>
       </geometry>
       <material name="Grey">
         <!-- <color rgba="0 1 1 1"/> -->
@@ -1140,14 +1106,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_1.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_1.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_1.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_1.STL"/>
       </geometry>
       <material name="Grey">
         <!-- <color rgba="0 1 1 1"/> -->
@@ -1169,14 +1135,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_2.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_2.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_2.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_2.STL"/>
       </geometry>
       <material name="Grey"/>
     </collision>
@@ -1196,14 +1162,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_3.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_3.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_3.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_3.STL"/>
       </geometry>
       <material name="Grey"/>
     </collision>
@@ -1689,7 +1655,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_0.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_0.STL"/>
       </geometry>
       <material name="Grey">
         <!-- <color rgba="0 1 1 1"/> -->
@@ -1710,14 +1676,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_1.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_1.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.05717 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_1.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_1.STL"/>
       </geometry>
       <material name="Grey">
         <!-- <color rgba="0 1 1 1"/> -->
@@ -1739,14 +1705,14 @@
     <visual>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_2.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_2.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 1.5708" xyz="0 0.03810 0.0075"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_2.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_2.STL"/>
       </geometry>
       <material name="Grey"/>
     </collision>
@@ -1766,14 +1732,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/link_3.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/link_3.STL"/>
       </geometry>
       <material name="Grey"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/collision/link_3.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/link_3.STL"/>
       </geometry>
       <material name="Grey"/>
     </collision>
@@ -2249,21 +2215,21 @@
   <link name="palm">
     <visual>
       <geometry>
-        <mesh filename="package://iiwa_tool_description/meshes/visual/palm.STL"/>
+        <mesh filename="package://iiwa_3finger_description/meshes/visual/palm.STL"/>
       </geometry>
-      <material name="Green">
+      <material name="Black">
         <!-- <color rgba="0 1 0 1"/> -->
       </material>
     </visual>
     <!-- Mesh collision -->
-    <!-- <collision>
-          <geometry>
-            <mesh filename="package://iiwa_tool_description/meshes/collision/palm.STL"/>
-          </geometry>
-          <material name="Grey">
-            <color rgba="0 1 1 1"/>
-          </material>
-        </collision> -->
+    <collision>
+      <geometry>
+        <mesh filename="package://iiwa_3finger_description/meshes/collision/palm.STL"/>
+      </geometry>
+      <material name="Grey">
+        <color rgba="0 1 1 1"/>
+      </material>
+    </collision>
     <!-- Simple shape collision -->
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>

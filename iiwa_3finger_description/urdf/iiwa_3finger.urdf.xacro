@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 
 <!-- Here we define the robot, we named it "iiwa14_3finger_gripper" -->
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="iiwa_3finger">
+<robot name="iiwa_3finger" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Import Rviz colors -->
-  <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
+ 
   <!--Import the iiwa14 macro -->
   <xacro:include filename="$(find iiwa_description)/urdf/iiwa14.xacro"/>
+
+
   <xacro:include filename="$(find iiwa_3finger_description)/urdf/robotiq_finger.urdf.xacro"/>
   
   <!--  Arguments for the iiwa14 macro  -->
   <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
   <xacro:arg name="robot_name" default="iiwa"/>
   <!-- xacro:arg name="prefix" default=""/-->
-  
 
 
   <!--  Define the origin of your 3D space
@@ -21,8 +21,6 @@
   This will include the cart in the scene and avoid the robot to hit it when using MoveIt! 
   If you don't want to have that you can define a basic world link (see commented lines)
   -->
-
-  <xacro:macro name="iiwa_3finger" params="parent hardware_interface robot_name *origin">
   
     <!--     <link name="world"/> -->
   <link name="world">
@@ -81,7 +79,7 @@
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_3finger_description/meshes/visual/collision/coupling.STL" />
+          <mesh filename="package://iiwa_3finger_description/meshes/collision/coupling.STL" />
         </geometry>
         <material name="Grey">
           <!--color rgba="0 1 1 1"/-->
@@ -112,21 +110,21 @@
       <link name="palm">
         <visual>
           <geometry>
-            <mesh filename="package://iiwa_tool_description/meshes/visual/palm.STL" />
+            <mesh filename="package://iiwa_3finger_description/meshes/visual/palm.STL" />
           </geometry>
-          <material name="Green">
+          <material name="Black">
             <!-- <color rgba="0 1 0 1"/> -->
           </material>
         </visual>
         <!-- Mesh collision -->
-        <!-- <collision>
+        <collision>
           <geometry>
-            <mesh filename="package://iiwa_tool_description/meshes/collision/palm.STL"/>
+            <mesh filename="package://iiwa_3finger_description/meshes/collision/palm.STL"/>
           </geometry>
           <material name="Grey">
             <color rgba="0 1 1 1"/>
           </material>
-        </collision> -->
+        </collision>
         <!-- Simple shape collision -->
         <collision>
           <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -195,8 +193,5 @@
     <gazebo reference="palm_finger_middle_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
-
-
-    </xacro:macro>
 
 </robot> 
