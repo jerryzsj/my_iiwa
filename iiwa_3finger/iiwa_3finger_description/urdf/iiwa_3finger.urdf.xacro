@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 
 <!-- Here we define the robot, we named it "iiwa14_3finger_gripper" -->
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="iiwa14_3finger_gripper">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="iiwa_3finger">
   
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find iiwa_description)/urdf/materials.xacro" />
   <!--Import the iiwa14 macro -->
   <xacro:include filename="$(find iiwa_description)/urdf/iiwa14.xacro"/>
+  <!-- Import robotiq finger -->
+  <xacro:include filename="$(find iiwa_3finger)/iiwa_3finger_description/urdf/robotiq_finger.urdf.xacro"/>
 
-
+  
   <!--  Arguments for the iiwa14 macro  -->
   <xacro:arg name="hardware_interface" default="PositionJointInterface"/>
   <xacro:arg name="robot_name" default="iiwa"/>
@@ -18,25 +20,25 @@
   This will include the cart in the scene and avoid the robot to hit it when using MoveIt! 
   If you don't want to have that you can define a basic world link (see commented lines)
   -->
-  
-  <!--     <link name="world"/> -->
-  
+
+  <xacro:macro name="iiwa_3finger" params="prefix">
+    <!--     <link name="world"/> -->
   <link name="world">
     <visual>
       <origin xyz="0 0 0.38" rpy="0 0 0"/>
       <geometry>
-	<box size="0.60 0.60 0.76"/>
+  <box size="0.60 0.60 0.76"/>
       </geometry>
-      <material name="Grey">
+      <material name="Blue">
       </material>
     </visual>
     <collision>
       <origin xyz="0 0 0.38" rpy="0 0 0"/>
       <geometry>
 
-	<box size="0.60 0.60 0.76"/>
+  <box size="0.60 0.60 0.76"/>
       </geometry>
-      <material name="Grey">
+      <material name="Blue">
       </material>
     </collision>
   </link>
@@ -68,18 +70,18 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes//visual/coupling.STL" />
+          <mesh filename="package://iiwa_3finger_description/meshes/visual/coupling.STL" />
         </geometry>
-        <material name="Grey">
+        <material name="Black">
           <!--color rgba="0 1 0 1"/-->
         </material>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://iiwa_tool_description/meshes//collision/coupling.STL" />
+          <mesh filename="package://iiwa_3finger_description/meshes/visual/collision/coupling.STL" />
         </geometry>
-        <material name="Grey">
+        <material name="Black">
           <!--color rgba="0 1 1 1"/-->
         </material>
       </collision>
@@ -93,25 +95,25 @@
   <!--  Here we define another fixed joint. It is placed at the end of the coupling-->
   <joint name="couling_joint" type="fixed">
     <parent link="coupling_link" />
-    <child link = "palm" />
+    <child link = "${prefix}palm" />
     <origin xyz="0.04 0.07 0.04" rpy="${PI/2} ${PI/2} ${PI/2}" />   
   </joint>
 
     <!-- Insert the fingers -->
-    <xacro:robotiq_finger prefix="finger_1_"/>
-    <xacro:robotiq_finger prefix="finger_2_"/>
-    <xacro:robotiq_finger prefix="finger_middle_"/>
+    <xacro:robotiq_finger prefix="${prefix}finger_1_"/>
+    <xacro:robotiq_finger prefix="${prefix}finger_2_"/>
+    <xacro:robotiq_finger prefix="${prefix}finger_middle_"/>
 
       <!-- link list -->
 
       <!-- Link palm -->
-      <link name="palm">
+      <link name="${prefix}palm">
         <visual>
           <geometry>
             <mesh filename="package://iiwa_tool_description/meshes/visual/palm.STL" />
           </geometry>
-          <material name="Grey">
-            <color rgba="0 1 0 1"/>
+          <material name="Green">
+            <!-- <color rgba="0 1 0 1"/> -->
           </material>
         </visual>
         <!-- Mesh collision -->
@@ -130,7 +132,7 @@
             <box size="0.1 0.1 0.1"/>
           </geometry>
           <material name="Grey">
-            <color rgba="0 1 1 1"/>
+            <!-- <color rgba="0 1 1 1"/> -->
           </material>
         </collision>
         <inertial>
@@ -140,7 +142,7 @@
         </inertial>
       </link>
 
-      <gazebo reference="palm">
+      <gazebo reference="${prefix}palm">
         <mu1>1.1</mu1>
         <mu2>1.1</mu2>
       </gazebo>
@@ -149,9 +151,9 @@
     <!-- Joint list -->
 
     <!-- Joint palm_finger_1_joint -->
-    <joint name="palm_finger_1_joint" type="revolute">
-      <parent link="palm"/>
-      <child link="finger_1_link_0"/>
+    <joint name="${prefix}palm_finger_1_joint" type="revolute">
+      <parent link="${prefix}palm"/>
+      <child link="${prefix}finger_1_link_0"/>
       <dynamics damping="1" friction="0" />
       <axis xyz="0 1 0"/>
       <origin rpy="0 3.1416 -1.57" xyz="-0.0455 0.0214 0.036"/>
@@ -159,14 +161,14 @@
       <limit lower="-0.2967" upper="0.2967" effort="60" velocity="-1"/>
     </joint>
 
-    <gazebo reference="palm_finger_1_joint">
+    <gazebo reference="${prefix}palm_finger_1_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
     <!-- Joint palm_finger_2_joint -->
-    <joint name="palm_finger_2_joint" type="revolute">
-      <parent link="palm"/>
-      <child link="finger_2_link_0"/>
+    <joint name="${prefix}palm_finger_2_joint" type="revolute">
+      <parent link="${prefix}palm"/>
+      <child link="${prefix}finger_2_link_0"/>
       <dynamics damping="1" friction="0" />
       <axis xyz="0 1 0"/>
       <origin rpy="0 3.1416 -1.57" xyz="-0.0455 0.0214 -0.036"/>
@@ -174,21 +176,24 @@
       <limit lower="-0.2967" upper="0.2967" effort="60" velocity="-1"/>
     </joint>
 
-    <gazebo reference="palm_finger_2_joint">
+    <gazebo reference="${prefix}palm_finger_2_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
     <!-- Joint palm_finger_middle_joint -->
-    <joint name="palm_finger_middle_joint" type="revolute">
-      <parent link="palm"/>
-      <child link="finger_middle_link_0"/>
+    <joint name="${prefix}palm_finger_middle_joint" type="revolute">
+      <parent link="${prefix}palm"/>
+      <child link="${prefix}finger_middle_link_0"/>
       <dynamics damping="1" friction="0" />
       <axis xyz="0 1 0"/>
       <origin rpy="0 0 1.57" xyz="0.0455 0.0214 0"/>
       <limit lower="0" upper="0" effort="60" velocity="-1"/>
     </joint>
 
-    <gazebo reference="palm_finger_middle_joint">
+    <gazebo reference="${prefix}palm_finger_middle_joint">
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
+  </xacro:macro>
+
+
 </robot> 
