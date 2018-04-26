@@ -19,6 +19,9 @@
   <run_depend>iiwa_msg</run_depend>
   <run_depend>iiwa_ros</run_depend>
   <run_depend>iiwa14_moveit_config</run_depend>
+  <run_depend>iiwa_3finger_description</run_depend>
+  <run_depend>iiwa_3finger_moveit</run_depend>
+  <run_depend>iiwa_3finger_examples</run_depend>
   
   <export>
     <metapackage/>
