@@ -9,6 +9,11 @@
   <!-- By default, we are not in debug mode -->
   <arg name="debug" default="false" />
 
+  <!-- Define hardware_interface -->
+  <arg name="hardware_interface" default="hardware_interface"/>
+  <arg name="robot_name" default="iiwa"/>
+  <arg name="model" default="iiwa14"/>
+
   <!--
   By default, hide joint_state_publisher's GUI
 
