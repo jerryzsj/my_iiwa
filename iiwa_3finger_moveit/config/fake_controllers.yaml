@@ -1,18 +1,4 @@
 controller_list:
-  - name: fake_manipulator_controller
-    joints:
-      - palm_finger_1_joint
-      - finger_1_joint_paraproximal_actuating_hinge
-      - finger_1_joint_proximal_actuating_hinge
-      - palm_finger_2_joint
-      - finger_2_joint_paraproximal_actuating_hinge
-      - finger_2_joint_proximal_actuating_hinge
-      - palm_finger_middle_joint
-      - finger_middle_joint_1
-      - finger_middle_joint_2
-      - finger_middle_joint_3
-      - finger_middle_joint_paraproximal_actuating_hinge
-      - finger_middle_joint_proximal_actuating_hinge
   - name: fake_robot_controller
     joints:
       - iiwa_joint_1
@@ -22,3 +8,11 @@ controller_list:
       - iiwa_joint_5
       - iiwa_joint_6
       - iiwa_joint_7
+  - name: fake_gripper_controller
+    joints:
+      - palm_finger_1_joint
+      - finger_1_joint_1
+      - palm_finger_2_joint
+      - finger_2_joint_1
+      - palm_finger_middle_joint
+      - finger_middle_joint_1
