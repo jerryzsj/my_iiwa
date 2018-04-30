@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <launch>
 
   <!-- By default, we do not start a database (it can be large) -->
@@ -48,6 +49,13 @@
     <arg name="config" value="true"/>
     <arg name="debug" value="$(arg debug)"/>
   </include>
+
+  <!-- Load Gazebo with given values -->
+        <include file="$(find iiwa_gazebo)/launch/iiwa_gazebo.launch">
+            <arg name="hardware_interface" value="$(arg hardware_interface)"/>
+            <arg name="robot_name" value="$(arg robot_name)" />
+            <arg name="model" value="$(arg model)"/>
+        </include>
 
   <!-- If database loading was enabled, start mongodb as well -->
   <include file="$(find iiwa_3finger_moveit)/launch/default_warehouse_db.launch" if="$(arg db)">
