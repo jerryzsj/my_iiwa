@@ -19,17 +19,6 @@
     <remap from="robot_description" to="/$(arg robot_name)/robot_description" /> 
     <remap from="/get_planning_scene" to="/$(arg robot_name)/get_planning_scene" /> 
     
-    <!-- Run the robot within a Gazebo simulation. -->
-    <group ns="$(arg robot_name)" if="$(arg sim)">
-        
-        <!-- Load Gazebo with given values -->
-        <include file="$(find iiwa_gazebo)/launch/iiwa_gazebo.launch">
-            <arg name="hardware_interface" value="$(arg hardware_interface)"/>
-            <arg name="robot_name" value="$(arg robot_name)" />
-            <arg name="model" value="$(arg model)"/>
-        </include>
-    </group>
-    
     <!-- Working with the real robot.  -->
     <group ns="$(arg robot_name)" unless="$(arg sim)">
         
